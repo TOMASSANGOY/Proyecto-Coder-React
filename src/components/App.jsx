@@ -4,10 +4,10 @@ import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <ItemListContainer greeting={'Bienvenidos'}/>
-    </div>
+    </>
   );
 }
 
