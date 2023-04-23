@@ -1,6 +1,10 @@
+.row {
+    --bs-gutter-x: 0;
+}
+
 /* NAV */
 .logo {
-    width: 170px;
+    width: 180px;
 }
 
 .logo img {
@@ -8,26 +12,74 @@
 }
 
 nav {
-    border-bottom: 1px inset black;
+    border-bottom: 2px inset black;
 }
 
-.letras a {
+nav ul li {
+    border-radius: 25px;
+    margin: 0 20px
+}
+
+nav ul button {
+    background: none;
+    background-color: antiquewhite;
     font-size: 100%;
-    color: rgb(196, 134, 255);
     margin: 0 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+nav ul button:hover {
+    background: none;
+    background-color: rgb(190, 187, 187);
+    font-size: 100%;
+}
+
+nav ul button p {
+    font-size: 100%;
+    color: black;
+    font-weight: 800;
+    margin: 0 20px;
+    font-size: 16px;
     text-align: center;
 }
 
-@media (max-width: 1390px) {
-    .letras a {
-        font-size: 16px;
-        margin: 0 5px;
-    }
+.dropdown-item {
+    display: block;
+    width: 75%;
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+    clear: both;
+    font-weight: 400;
+    color: var(--bs-dropdown-link-color);
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
-@media (max-width: 1290px) {
-    .letras a {
-        font-size: 13px;
+
+.dropdown-item:hover {
+    display: block;
+    width: 75%;
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+    clear: both;
+    font-weight: 400;
+    color: var(--bs-dropdown-link-color);
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: antiquewhite;
+    border: 0;
+}
+
+@media (max-width: 1280px) {
+    nav ul button p {
+        font-size: 100%;
+        color: black;
+        font-weight: 800;
         margin: 0 5px;
+        font-size: 10px;
+        text-align: center;
     }
 }
 
@@ -43,39 +95,43 @@ nav {
 }
 
 
-nav ul{
+nav ul {
     width: 70%;
     margin: 0 2% 0 2%;
     justify-content: center;
 }
 
 @media (max-width: 991px) {
-    nav ul{
+    nav ul {
         width: 100%;
         margin: 0 2% 0 2%;
         justify-content: center;
     }
+
     .form-control {
         width: 100%;
     }
-    
+
 }
 
 .form-control {
     width: 50%;
 }
 
-.d-flex{
+.d-flex {
     align-items: center;
     justify-content: center;
 }
 
-/*  */
-main{
-    height: 100vh;
+/* h1 */
+
+h1 {
+    text-align: center;
 }
 
-main p {
-    padding-top: 200px;
-    text-align: center;
+/* ItemListContainer */
+.card {
+    margin: 20px;
+    padding: 10px;
+
 }
