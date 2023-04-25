@@ -1,36 +1,33 @@
 import { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 //Consulto a mis productos de mi base de datos y se los envio a ItemLIts
 
 export const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
-
-    /* useEffect(() => {
-        const promesa = () => new Promise((resolve, reject) =>  {
-            if(true) {
-                resolve(BBD)
-            }
-                reject ("No posee los permisos necesarios");
-        })
-
-        promesa()
-        .then(productos => {
-            const items = <ItemList productos={productos} /> //Envio los productos consultadps
-            setProductos(items)
-        })
-        .catch(error => console.log(error))
-    }, []) */
+    const { category } = useParams()
 
     useEffect(() => {
-        fetch('./json/productos.json')
+
+        if(category) {  // Consulto si me ingresaron un parametro en la url
+            fetch('../json/productos.json')
+            .then(response => response.json())
+            .then(productos => {
+                const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === parseInt(category))
+                setProductos(productosFiltrados)
+            })
+        } else {
+            fetch('./json/productos.json')
             .then(response => response.json())
             .then(productos => {
                 const productosFiltrados = productos.filter(prod => prod.stock > 0)
                 setProductos(productosFiltrados)
-            })
 
-    }, [])
+            })
+        }
+
+    }, [category]) //cada vez que se modifica la categoria
 
     return (
         <div class="row">

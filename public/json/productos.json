@@ -7,7 +7,7 @@
         "material": "Plata 210",
         "precio": "$2100",
         "stock": 5,
-        "img": "img/collar1.jpg"
+        "img": "/img/collar1.jpg"
     },
 
     {
@@ -17,17 +17,17 @@
         "material": "plata 210",
         "precio": "$1500",
         "stock": 50,
-        "img": "img/aros1.jpg"
+        "img": "/img/aros1.jpg"
     },
 
     {
         "id": 3,
-        "idCategoria": 3,
+        "idCategoria": 2,
         "nombre": "Abridor",
         "material": "plata 210",
         "precio": "$3500",
         "stock": 25,
-        "img": "img/abridor1.jpg"
+        "img": "/img/abridor1.jpg"
     },
 
     {
@@ -37,7 +37,7 @@
         "material": "plata 210",
         "precio": "$3500",
         "stock": 25,
-        "img": "img/anillo1.jpg"
+        "img": "/img/anillo1.jpg"
     }
 
 ]
