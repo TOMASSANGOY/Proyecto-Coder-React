@@ -1,6 +1,7 @@
 import { CartWidget } from "../CartWidget/CartWidget";
 import logo from "../Navbar/assets/logo.png";
 import { Link } from "react-router-dom";
+import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode";
 
 export const Navbar = () => {
     return (
@@ -18,25 +19,21 @@ export const Navbar = () => {
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link"><Link>Nosotros</Link></button>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="nav-link dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><Link>Tienda</Link></button>
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item"><Link to={"/category/1"}>Collares</Link></button>
-                                <button class="dropdown-item"><Link to={"/category/2"}>Aritos</Link></button>
-                                <button class="dropdown-item"><Link to={"/category/3"}>Anillos</Link></button>
-                            </div>
+                            <button class="nav-link"><Link to={"/category/1"}>Collares</Link></button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link"><Link>Contactanos</Link></button>
+                            <button class="nav-link"><Link to={"/category/2"}>Aritos</Link></button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link"><Link to={"/category/3"}>Anillos</Link></button>
                         </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-sm-2" type="search" placeholder="Search" />
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <CartWidget />
+                    <BotonDarkMode />
                 </div>
             </div>
         </nav>

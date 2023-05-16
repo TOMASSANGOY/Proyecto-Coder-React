@@ -31,7 +31,7 @@ export const ItemListContainer = () => {
 
     return (
         <div class="row">
-            {<ItemList productos={productos} />}
+            {<ItemList productos={productos} plantilla={"item"} />}
         </div>
     );
 }

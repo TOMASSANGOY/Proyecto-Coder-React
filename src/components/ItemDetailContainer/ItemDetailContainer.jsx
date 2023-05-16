@@ -15,7 +15,7 @@ export const ItemDetailContainer = () => {
                 setItem(prod)
             })
 
-    }, [])
+    }, )
 
     return (
         <div className="card mb-3 container itemDetail">
